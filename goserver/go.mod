@@ -1,3 +1,3 @@
-module github.com/soet8888/goserver
+module github.com/soet8888/go/goserver
 
 go 1.12
