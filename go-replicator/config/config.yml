@@ -1,0 +1,40 @@
+# objects configurations
+collections:
+  - path: "privileges" 
+    fts: false 
+    group-collections: false
+  - path: "bizs/ok/products" 
+    fts: false
+  - path: "users" 
+    fts: false
+  - path: "bizs/ok/buyers"
+    fts: true
+    fields:
+     - field: "user_name"
+     - field: "user_id"
+     - field: "biz_name"
+  - path: "bizs/ok/pds"
+  - path: "bizs/ok/pos"
+  - path: "bizs/ok/storages"
+    fts: false
+  - path: "bizs/ok/inventory_takings"
+  - path: "bizs/ok/products"
+  - path: "my_org"
+    fts: false
+    filter:
+     - field: "name"
+       compare: "=="
+       value: "92 RON"
+     - field: "price"
+       compare: "=="
+       value: "780"  
+  - path: "po_products"
+    group-collections: true
+    fts: false
+    fields:
+     - field: "po_id"
+     - field: "product_name"
+# Firebase crediantial file path
+firebase:
+  cred: "/home/soet/Downloads/dev.json"
+  
